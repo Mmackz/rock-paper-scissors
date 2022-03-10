@@ -103,16 +103,16 @@ header {
    box-shadow: inset 0 -5px 1px 0 hsla(0, 0%, 13%, 0.253);
 }
 
-#paper::before {
-   background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+.paper::before {
+   background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)) !important;
 }
 
-#scissors::before {
-   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+.scissors::before {
+   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%)) !important;
 }
 
-#rock::before {
-   background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+.rock::before {
+   background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%)) !important;
 }
 
 .circle > img {
@@ -127,7 +127,7 @@ header {
 .picks {
    width: 680px;
    margin: 0 auto;
-   margin-top: -110px;
+   margin-top: -136px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -137,18 +137,20 @@ header {
 .pick-title {
    text-transform: uppercase;
    font-size: 1.1rem;
-   margin-bottom: 1.75rem;
+   margin-bottom: 2.75rem;
 }
 
 .placeholder {
-   width: 180px;
-   height: 180px;
+   width: 140px;
+   height: 140px;
    border-radius: 100%;
-   background: rgba(20, 20, 20, 0.315);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .result-container {
-   margin-bottom: -220px;
+   margin-bottom: -265px;
    border: 2px solid hsl(217, 16%, 45%);
    padding: 1.4rem;
    border-radius: 10px;
@@ -176,4 +178,35 @@ header {
 
 .hide {
    display: none;
+}
+
+.large-circle {
+   height: 140px;
+   width: 140px;
+   background: white;
+   border-radius: 100%;
+   box-shadow: inset 0 7px 2px 0 #ccc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.large-circle > img {
+   width: 58px;
+}
+
+.placeholder::before,
+.large-circle::before {
+   content: "";
+   position: absolute;
+   height: 180px;
+   width: 180px;
+   border-radius: 100%;
+   z-index: -1;
+   background: rgba(20, 20, 20, 0.315);
+}
+
+.large-circle::before {
+   box-shadow: inset 0 -7px 1px 0 hsla(0, 0%, 13%, 0.253);
 }

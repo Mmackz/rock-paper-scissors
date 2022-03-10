@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <title>TOP: Rock, Paper, Scissors</title>
+   <script src="index.js" defer></script>
 </head>
 <body>
       <header>
@@ -20,31 +21,31 @@
          <div class="choices">
             <img src="./images/bg-triangle.svg" alt="triangle" width="200px">
             <div class="triangle-top">
-               <div class="circle" id="paper">
+               <div class="circle paper" id="paper" data-choice="paper">
                   <img class="choice-icon" src="./images/icon-paper.svg" alt="paper icon">
                </div>
-               <div class="circle" id="scissors">
+               <div class="circle scissors" id="scissors" data-choice="scissors">
                   <img class="choice-icon" src="./images/icon-scissors.svg" alt="scissors icon">
                </div>
             </div>
             <div class="triangle-bottom">
-               <div class="circle" id="rock">
+               <div class="circle rock" id="rock" data-choice="rock">
                   <img class="choice-icon" src="./images/icon-rock.svg" alt="rock icon">
                </div>
             </div>
          </div>
          <div class="picks">
-            <div class="pick user-pick">
+            <div>
                <p class="pick-title">You Picked</p>
-               <div class="placeholder"></div>
+               <div id="user-pick" class="placeholder"></div>
             </div>
             <div class="result-container">
                <p class="result">You win</p>
-               <button class="restart">Play Again?</button>
+               <button class="restart" id="restart-btn">Play Again?</button>
             </div>
-            <div class="pick house-pick">
+            <div>
                <p class="pick-title">The House Picked</p>
-               <div class="placeholder"></div>
+               <div id="house-pick" class="placeholder"></div>
             </div>
          </div>
       </main>
