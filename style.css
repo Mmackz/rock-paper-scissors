@@ -125,13 +125,20 @@ header {
 
 /* picks style */
 .picks {
-   width: 680px;
+   width: 650px;
    margin: 0 auto;
    margin-top: -136px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    text-align: center;
+}
+
+.picks > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 .pick-title {
@@ -189,7 +196,7 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
-   
+   transition: all 250ms linear;
 }
 
 .large-circle > img {
@@ -205,6 +212,7 @@ header {
    border-radius: 100%;
    z-index: -1;
    background: rgba(20, 20, 20, 0.315);
+   transition: height 250ms linear;
 }
 
 .large-circle::before {
