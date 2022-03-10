@@ -156,6 +156,44 @@ header {
    justify-content: center;
 }
 
+.score-container {
+   position: relative;
+   top: 120px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.scores-container {
+   display: flex;
+   align-items: center;
+}
+
+.score {
+   padding: 0.5rem 1rem;
+   gap: 0.2rem;
+   margin-bottom: -10px;
+   margin-left: 1rem;
+   margin-right: 1rem;
+}
+
+.scores {
+   font-size: 2rem;
+   color: var(--dark-text);
+}
+
+.house-outcome,
+.user-outcome {
+   font-size: 1.6rem;
+}
+
+.outcome {
+   margin-bottom: 1rem;
+   font-size: 1.25rem;
+   text-transform: uppercase;
+   font-weight: 800;
+}
+
 .result-container {
    margin-bottom: -265px;
    border: 2px solid hsl(217, 16%, 45%);
