@@ -42,7 +42,7 @@ header {
    border: var(--outline);
    border-radius: 10px;
    max-width: 640px;
-   margin: 0 auto 2rem;
+   margin: 0 auto 3rem;
 }
 
 .scorecard {
@@ -281,7 +281,7 @@ header {
    }
 
    main {
-      min-width: 300px;
+      min-width: 400px;
    }
 
    .picks {
@@ -302,5 +302,131 @@ header {
    .large-circle::before {
       width: 160px;
       height: 160px;
+   }
+
+   .house-outcome,
+   .user-outcome {
+      display: none;
+   }
+}
+
+@media (max-width: 540px) {
+   header {
+      transform: scale(0.9);
+      margin-bottom: 1.75rem;
+   }
+
+   .choices {
+      transform: scale(0.82);
+      margin-top: -1rem;
+   }
+
+   .picks {
+      margin-top: -120px;
+      flex-wrap: wrap;
+      justify-content: center;
+      transform: scale(0.8);
+      padding: 0;
+      pointer-events: none;
+   }
+
+   .picks > div:first-child {
+      margin-right: 14.5rem
+   }
+
+   .score-container {
+      top: 0;
+      margin-top: -20px;
+   }
+
+   .middle {
+      order: 2;
+   }
+
+   .house-outcome,
+   .user-outcome {
+      display: inline-block;
+   }
+
+   .result-container {
+      margin-bottom: 0;
+      pointer-events: visible;
+   }
+}
+
+@media (max-width: 480px) {
+
+   .picks {
+      margin-top: -70px;
+   }
+
+   .picks > div:first-child {
+      margin-right: 10rem
+   }
+
+   header > .scorecard {
+      width: 120px;
+   }
+
+   .middle {
+      margin-top: 2.5rem;
+   }   
+}
+
+@media (max-width: 400px) {
+   body {
+      padding: 0.5rem;
+   }
+
+   main {
+      min-width: 360px;
+      max-height: 535px;
+   }
+
+   .choices {
+      width: auto;
+   }
+
+   .pick-title {
+      margin-bottom: 2rem;
+   }
+
+   .picks {
+      margin-top: -50px;
+   }
+
+   .picks > div:first-child {
+      margin-right: 8rem
+   }
+
+   .score-container {
+      margin: 0;
+   }
+}
+
+@media (max-width: 380px) {
+   header > * {
+      transform: scale(0.9);
+   }
+
+   header > img {
+      height: 90px;
+   }
+
+   header > .scorecard {
+      width: 100px;
+   }
+
+   .picks > div:first-child {
+      margin-right: 5rem
+   }
+
+   body {
+      min-width: 100%;
+      padding: 0;
+   }
+
+   main {
+      min-width: 320px;
    }
 }
