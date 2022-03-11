@@ -11,11 +11,15 @@
    box-sizing: border-box;
 }
 
+html {
+   max-height: 100vh;
+}
+
 body {
    margin: 0;
+   padding-top: 3rem;
    min-height: 100vh;
    max-height: 100vh;
-   overflow-y: hidden;
    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
    font-family: "Barlow Semi Condensed", sans-serif;
    -webkit-font-smoothing: antialiased;
@@ -25,6 +29,7 @@ body {
 
 main {
    min-width: 640px;
+   position: relative;
 }
 
 /* header styles */
@@ -36,7 +41,7 @@ header {
    border: var(--outline);
    border-radius: 10px;
    width: 640px;
-   margin: 3rem auto 2rem;
+   margin: 0 auto 2rem;
 }
 
 .scorecard {
@@ -128,7 +133,7 @@ header {
 .picks {
    width: 650px;
    margin: 0 auto;
-   margin-top: -136px;
+   margin-top: -110px;
    display: flex;
    justify-content: space-between;
    align-items: center;
