@@ -17,6 +17,7 @@ html {
 
 body {
    margin: 0;
+   padding: 0.5rem;
    padding-top: 3rem;
    min-height: 100vh;
    max-height: 100vh;
@@ -40,7 +41,7 @@ header {
    justify-content: space-between;
    border: var(--outline);
    border-radius: 10px;
-   width: 640px;
+   max-width: 640px;
    margin: 0 auto 2rem;
 }
 
@@ -131,13 +132,15 @@ header {
 
 /* picks style */
 .picks {
-   width: 650px;
+   max-width: 740px;
    margin: 0 auto;
    margin-top: -110px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    text-align: center;
+   padding-left: 2rem;
+   padding-right: 2rem;
 }
 
 .picks > div {
@@ -211,7 +214,7 @@ header {
    font-size: 1.35rem;
    text-transform: uppercase;
    margin: 0 0 1rem;
-   line-height: 1rem; 
+   line-height: 1rem;
 }
 
 .restart {
@@ -265,4 +268,39 @@ header {
 
 .outcome {
    min-height: 1.5rem;
+}
+
+/* media queries */
+@media (max-width: 720px) {
+   html {
+      font-size: 15px;
+   }
+
+   body {
+      padding-top: 2rem;
+   }
+
+   main {
+      min-width: 300px;
+   }
+
+   .picks {
+      max-width: 540px;
+   }
+
+   .outcome {
+      font-size: 1rem;
+   }
+
+   .placeholder,
+   .large-circle {
+      width: 120px;
+      height: 120px;
+   }
+
+   .placeholder::before,
+   .large-circle::before {
+      width: 160px;
+      height: 160px;
+   }
 }
