@@ -11,6 +11,9 @@ const userEmoji = document.querySelector(".user-outcome");
 const houseEmoji = document.querySelector(".house-outcome");
 const outcomeText = document.getElementById("outcome");
 const choicesEl = document.querySelectorAll(".circle");
+const rulesBtn = document.getElementById("rules");
+const overlay = document.getElementById("overlay");
+const closeIcon = document.getElementById("close-icon");
 
 const choices = ["rock", "paper", "scissors"];
 
@@ -110,3 +113,20 @@ restartBtn.addEventListener("click", () => {
    clearEl(userPick);
    resetGame();
 });
+
+rulesBtn.addEventListener("click", (event) => {
+   event.stopPropagation();
+   overlay.classList.remove("hide");
+});
+
+closeIcon.addEventListener("click", () => {
+   overlay.classList.add("hide");
+})
+
+document.body.addEventListener("click", () => {
+   overlay.classList.add("hide");
+})
+
+overlay.addEventListener("click", (event) => {
+   event.stopPropagation();
+})

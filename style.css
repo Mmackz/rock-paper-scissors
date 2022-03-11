@@ -45,6 +45,10 @@ header {
    margin: 0 auto 3rem;
 }
 
+button {
+   font-family: "Barlow Semi Condensed", sans-serif;
+}
+
 .scorecard {
    width: 140px;
    background: white;
@@ -231,7 +235,7 @@ header {
 }
 
 .hide {
-   display: none;
+   display: none !important;
 }
 
 .large-circle {
@@ -268,6 +272,55 @@ header {
 
 .outcome {
    min-height: 1.5rem;
+}
+
+.rules {
+   display: block;
+   margin-left: auto;
+   margin-top: 4rem;
+   margin-right: 2rem;
+   padding: 0.65rem 2rem;
+   background: transparent;
+   color: #fafafa;
+   border: var(--outline);
+   border-radius: 10px;
+   text-transform: uppercase;
+   font-weight: 800;
+}
+
+.overlay {
+   width: 400px;
+   padding: 1rem 2rem 2rem;
+   background:#fafafa;
+   border-radius: 12px;
+   position: absolute;
+   z-index: 2;
+   left: calc(50% - 200px);
+   top: calc(50% - 250px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.overlay > p {
+   margin: 0;
+   color: var(--dark-text);
+   text-transform: uppercase;
+   transform: translateY(15px);
+}
+
+.rules-title {
+   color: var(--dark-text);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   margin-bottom: 1.5rem;
+}
+
+.rules-title > h1 {
+   margin: 0;
 }
 
 /* media queries */
