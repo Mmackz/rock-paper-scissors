@@ -1,3 +1,4 @@
+// DOM elements
 const winsEl = document.getElementById("wins");
 const userPick = document.getElementById("user-pick");
 const housePick = document.getElementById("house-pick");
@@ -15,11 +16,12 @@ const rulesBtn = document.getElementById("rules");
 const overlay = document.getElementById("overlay");
 const closeIcon = document.getElementById("close-icon");
 
+// game variables
 const choices = ["rock", "paper", "scissors"];
-
 let gameover = false;
 let active = false;
 
+// functions
 function chooseRandom() {
    return choices[Math.floor(Math.random() * 3)];
 }
@@ -64,7 +66,7 @@ function playRound(user, house) {
 function isGameover() {
    if (userScore.innerText == "3" || houseScore.innerText == "3") {
       gameover = true;
-      setTimeout(() => { 
+      setTimeout(() => {
          scoreContainer.classList.add("hide");
          resultContainer.classList.remove("hide");
          if (+userScore.innerText > +houseScore.innerText) {
@@ -93,6 +95,7 @@ function clearEl(element) {
    element.classList = "placeholder";
 }
 
+// event listeners
 choicesEl.forEach((choice) => {
    choice.addEventListener("click", (event) => {
       if (!gameover && !active) {
@@ -123,12 +126,12 @@ rulesBtn.addEventListener("click", (event) => {
 
 closeIcon.addEventListener("click", () => {
    overlay.classList.add("hide");
-})
+});
 
 document.body.addEventListener("click", () => {
    overlay.classList.add("hide");
-})
+});
 
 overlay.addEventListener("click", (event) => {
    event.stopPropagation();
-})
+});
