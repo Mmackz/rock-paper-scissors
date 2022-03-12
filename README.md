@@ -20,12 +20,8 @@ Design was adapted using the style guide and assets from the [Rock, Paper, Sciss
 
 <p align="center"><img src="https://i.imgur.com/kincEuh.png" width="300px"></p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Built With
 
 * HTML
 * CSS
 * JavaScript
-
-<p align="right">(<a href="#top">back to top</a>)</p>
