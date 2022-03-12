@@ -64,14 +64,16 @@ function playRound(user, house) {
 function isGameover() {
    if (userScore.innerText == "3" || houseScore.innerText == "3") {
       gameover = true;
-      scoreContainer.classList.add("hide");
-      resultContainer.classList.remove("hide");
-      if (+userScore.innerText > +houseScore.innerText) {
-         resultEl.innerText = "You Win!!";
-         winsEl.textContent = +winsEl.innerText + 1;
-      } else {
-         resultEl.innerText = "You Lose 🥺";
-      }
+      setTimeout(() => { 
+         scoreContainer.classList.add("hide");
+         resultContainer.classList.remove("hide");
+         if (+userScore.innerText > +houseScore.innerText) {
+            resultEl.innerText = "You Win!!";
+            winsEl.textContent = +winsEl.innerText + 1;
+         } else {
+            resultEl.innerText = "You Lose 🥺";
+         }
+      }, 1100);
    }
 }
 
